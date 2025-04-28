@@ -44,7 +44,7 @@ function ModelUpload({ model, onModelUploaded }) {
     formData.append('file', file);
     
     try {
-      const response = await fetch(`http://localhost:8081/models/${model.id}/upload`, {
+      const response = await fetch(`http://34.135.45.185/models/${model.id}/upload`, {
         method: 'POST',
         body: formData,
       });

@@ -19,7 +19,7 @@ function App() {
 
   const fetchModels = async () => {
     try {
-      const response = await fetch('http://localhost:8081/models');
+      const response = await fetch('http://34.135.45.185/models');
       const data = await response.json();
       console.log("Fetched models data:", data); // Debug output
       

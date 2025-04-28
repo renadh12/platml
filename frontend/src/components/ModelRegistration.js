@@ -22,7 +22,7 @@ function ModelRegistration({ onModelCreated }) {
     setStatus({ message: '', type: '' });
 
     try {
-      const response = await fetch('http://localhost:8081/models', {
+      const response = await fetch('http://34.135.45.185/models', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

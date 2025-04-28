@@ -34,7 +34,7 @@ async fn main() {
             model_path: None,
             model_data: None,
         })),
-        models_dir: PathBuf::from("../api/model_storage/models"), // Match the path used in model management API
+        models_dir: PathBuf::from("/app/model_storage/models"), // Match the path used in model management API
     };
 
     // Ensure the models directory exists

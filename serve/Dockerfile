@@ -10,7 +10,7 @@ FROM debian:bookworm-slim
 RUN apt-get update && apt-get install -y ca-certificates libssl3 && rm -rf /var/lib/apt/lists/*
 
 # Copy the binary
-COPY --from=builder /app/target/release/ml-platform-api /usr/local/bin/
+COPY --from=builder /app/target/release/serve /usr/local/bin/
 
 # Create the model storage directory
 RUN mkdir -p /app/model_storage
@@ -19,7 +19,7 @@ RUN mkdir -p /app/model_storage
 WORKDIR /app
 
 # Expose port
-EXPOSE 8081
+EXPOSE 8080
 
 # Run the binary
-CMD ["ml-platform-api"]
+CMD ["serve"]

@@ -40,7 +40,7 @@ function Prediction({ model }) {
     const numericFeatures = features.map(f => parseFloat(f));
     
     try {
-      const response = await fetch('http://localhost:8080/predict', {
+      const response = await fetch('http://34.10.160.226/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

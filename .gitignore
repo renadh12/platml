@@ -9,6 +9,7 @@ npm-debug.log*
 build/
 .env
 *.log
+package-lock.json
 
 # OS Files
 .DS_Store
