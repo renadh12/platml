@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import config from '../config';
 
 function ModelUpload({ model, onModelUploaded }) {
   const [file, setFile] = useState(null);
@@ -44,7 +45,7 @@ function ModelUpload({ model, onModelUploaded }) {
     formData.append('file', file);
     
     try {
-      const response = await fetch(`http://localhost:8081/models/${model.id}/upload`, {
+      const response = await fetch(`/api/models/${model.id}/upload`, {
         method: 'POST',
         body: formData,
       });

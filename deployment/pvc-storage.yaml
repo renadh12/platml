@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: platml-model-storage
+  namespace: platml
+spec:
+  accessModes:
+    - ReadWriteOnce  # Changed back to RWO
+  storageClassName: standard-rwo  # Changed to standard
+  resources:
+    requests:
+      storage: 2Gi

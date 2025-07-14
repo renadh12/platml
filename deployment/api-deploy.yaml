@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: platml-api
+  namespace: platml
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: platml-api
+  template:
+    metadata:
+      labels:
+        app: platml-api
+    spec:
+      containers:
+      - name: platml-api
+        image: gcr.io/graphic-perigee-456801-r0/platml-api:v1
+        ports:
+        - containerPort: 8081
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        volumeMounts:
+        - name: model-storage
+          mountPath: /app/model_storage
+      volumes:
+      - name: model-storage
+        persistentVolumeClaim:
+          claimName: platml-model-storage
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: platml-api
+  namespace: platml
+spec:
+  selector:
+    app: platml-api
+  ports:
+  - port: 80
+    targetPort: 8081
+  type: LoadBalancer

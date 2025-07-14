@@ -5,6 +5,7 @@ import ModelList from './components/ModelList';
 import ModelUpload from './components/ModelUpload';
 import ModelServing from './components/ModelServing';
 import Prediction from './components/Prediction';
+import config from './config';
 
 function App() {
   const [models, setModels] = useState([]);
@@ -19,7 +20,7 @@ function App() {
 
   const fetchModels = async () => {
     try {
-      const response = await fetch('http://localhost:8081/models');
+      const response = await fetch('/api/models');
       const data = await response.json();
       console.log("Fetched models data:", data); // Debug output
       

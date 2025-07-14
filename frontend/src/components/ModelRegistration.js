@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import config from '../config';
 
 function ModelRegistration({ onModelCreated }) {
   const [modelData, setModelData] = useState({
@@ -22,7 +23,7 @@ function ModelRegistration({ onModelCreated }) {
     setStatus({ message: '', type: '' });
 
     try {
-      const response = await fetch('http://localhost:8081/models', {
+      const response = await fetch('/api/models', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

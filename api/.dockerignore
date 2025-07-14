@@ -1,0 +1,11 @@
+target/
+.git/
+node_modules/
+*.log
+*.tmp
+Dockerfile
+.dockerignore
+test_model.bin
+api-deploy.yaml
+model_storage/
+Cargo.lock
