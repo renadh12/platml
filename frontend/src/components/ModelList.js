@@ -20,7 +20,7 @@ function ModelList({ models, onSelectModel, refreshModels }) {
     setIsLoading(true);
     
     try {
-      const response = await fetch(`http://34.135.45.185/models/${id}`, {
+      const response = await fetch(`/api/models/${id}`, {
         method: 'DELETE'
       });
       

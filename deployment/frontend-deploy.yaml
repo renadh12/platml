@@ -15,9 +15,14 @@ spec:
     spec:
       containers:
       - name: platml-frontend
-        image: gcr.io/graphic-perigee-456801-r0/platml-frontend:v1
+        image: gcr.io/graphic-perigee-456801-r0/platml-frontend:v4
         ports:
         - containerPort: 80
+        env:
+        - name: API_URL
+          value: "http://35.224.58.29"
+        - name: SERVE_URL
+          value: "http://35.232.54.92"
         resources:
           requests:
             cpu: "100m"

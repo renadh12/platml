@@ -5,8 +5,8 @@ metadata:
   namespace: platml
 spec:
   accessModes:
-    - ReadWriteOnce
-  storageClassName: standard-multizone
+    - ReadWriteOnce  # Changed back to RWO
+  storageClassName: standard-rwo  # Changed to standard
   resources:
     requests:
       storage: 2Gi

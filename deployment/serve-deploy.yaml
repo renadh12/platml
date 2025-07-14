@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: platml-serve
-        image: gcr.io/graphic-perigee-456801-r0/platml-serve:v1
+        image: gcr.io/graphic-perigee-456801-r0/platml-serve:v2
         ports:
         - containerPort: 8080
         resources:

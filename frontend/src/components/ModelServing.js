@@ -9,7 +9,7 @@ function ModelServing({ model, onModelLoaded }) {
     setStatus({ message: '', type: '' });
     
     try {
-      const response = await fetch(`http://34.10.160.226/models/${model.id}`, {
+      const response = await fetch(`/serve/models/${model.id}`, {
         method: 'POST',
       });
       
@@ -41,7 +41,7 @@ function ModelServing({ model, onModelLoaded }) {
     setIsLoading(true);
     
     try {
-      const response = await fetch(`http://34.10.160.226/models`, {
+      const response = await fetch('/serve/models', {
         method: 'GET',
       });
       
