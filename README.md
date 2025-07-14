@@ -191,10 +191,10 @@ kubectl apply -f deployment/frontend-deploy.yaml
 kubectl get all -n platml
 ```
 
-## 📸 Deep Dive Demo Walkthrough
+## Deep Dive Demo Walkthrough
 
 <details>
-<summary><b>Click to expand full demo walkthrough with screenshots</b></summary>
+<summary><b>Click to expand full demo walkthrough</b></summary>
 
 ### Complete Workflow Demonstration
 
