@@ -25,13 +25,8 @@ A proof-of-concept ML platform with independent model management and serving API
 **Bottom Line**: A proof of concept for the fastest, safest, simplest way to serve ML models in production.
 
 ## 🎥 Demo
-
-Watch the platform in action: [Upload your video to one of these platforms]
-- **YouTube** (Recommended for public demos)
-- **Vimeo** (Professional looking, privacy controls)
-- **Google Drive** (Set to "Anyone with link can view")
-- **Loom** (Great for quick technical demos)
-- **GitHub** (If under 10MB, add to repo in `/docs/demo.mp4`)
+[![PlatML Demo](https://img.youtube.com/vi/kMiodE4Nvw8/hqdefault.jpg)](https://youtu.be/kMiodE4Nvw8)
+*Click to watch the full demo (1:50)*
 
 ## Architecture Overview
 
